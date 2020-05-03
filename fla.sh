@@ -79,7 +79,7 @@ do
         printf 'Choose device: '
         read deviced
         dmg2img -v -i $dmgpath.dmg -o $dmgpath.iso
-        dd if=$dmgpath of=$deviced && sync
+        dd if=$dmgpath.iso of=$deviced && sync
         clear
         echo 'Complete! Have a nice day!'
     elif [[ "$flashall" == "0" ]]; then
