@@ -37,7 +37,7 @@ do
             read fs
             printf 'Windows .iso path: '
             read windowsisopath
-            woeusb --tgt-fs $fs --device $windowsisopath $devicew
+            sudo woeusb --tgt-fs $fs --device $windowsisopath $devicew
             clear
             echo 'Complete! Have a nice day!'
         elif [[ "$flashiso" == "2" ]]; then
