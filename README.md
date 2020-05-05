@@ -1,2 +1,2 @@
 # Flashall
-Flashall - is universal image burner tool for Linux
+Flashall - is ultimate image burner script for Linux.
