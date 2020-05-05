@@ -78,7 +78,7 @@ do
         ls -l /dev/sd*
         printf 'Choose device: '
         read deviced
-        dmg2img -v -i $dmgpath.dmg -o $dmgpath.iso
+        dmg2img $dmgpath.dmg $dmgpath.iso
         dd if=$dmgpath.iso of=$deviced && sync
         clear
         echo 'Complete! Have a nice day!'
