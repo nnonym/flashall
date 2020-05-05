@@ -72,6 +72,7 @@ do
         clear
         echo 'Complete! Have a nice day!'
     elif [[ "$flashall" == "3" ]]; then
+        #hackintosh instructions on https://github.com/nnonym/Hackintosh-linux-installer
         clear
         printf '.dmg path(without .dmg): '
         read dmgpath
