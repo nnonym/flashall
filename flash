@@ -46,6 +46,7 @@ do
             read devicel
             printf 'Linux .iso path: '
             read linuxisopath
+            sudo umount $devicew*
             dd if=$linuxisopath of=$devicel && sync
             clear
             echo 'Complete! Have a nice day!'
@@ -56,6 +57,7 @@ do
             read deviceb
             printf 'BSD .iso path: '
             read BSDisopath
+            sudo umount $devicew*
             dd if=$BSDisopath of=$deviceb && sync
             clear
             echo 'Complete! Have a nice day!'
@@ -67,6 +69,7 @@ do
         read devicei
         printf '.img path: '
         read imgpath
+        sudo umount $devicew*
         dd if=$imgpath of=$devicei && sync
         clear
         echo 'Complete! Have a nice day!'
@@ -78,6 +81,7 @@ do
         ls -l /dev/sd*
         printf 'Choose device: '
         read deviced
+        sudo umount $devicew*
         dmg2img $dmgpath.dmg $dmgpath.iso
         dd if=$dmgpath.iso of=$deviced && sync
         clear
