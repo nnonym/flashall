@@ -33,11 +33,9 @@ do
             ls -l /dev/sd*
             printf 'Choose device: '
             read devicew
-            printf 'Choose filesystem[NTFS/FAT]: '
-            read fs
             printf 'Windows .iso path: '
             read windowsisopath
-            sudo woeusb --tgt-fs $fs --device $windowsisopath $devicew
+            sudo woeusb --device $windowsisopath $devicew
             clear
             echo 'Complete! Have a nice day!'
         elif [[ "$flashiso" == "2" ]]; then
