@@ -35,6 +35,7 @@ do
             read devicew
             printf 'Windows .iso path: '
             read windowsisopath
+            sudo umount $devicew*
             sudo woeusb --device $windowsisopath $devicew
             clear
             echo 'Complete! Have a nice day!'
