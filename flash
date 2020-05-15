@@ -47,7 +47,7 @@ do
             printf 'Linux .iso path: '
             read linuxisopath
             sudo umount $devicel*
-            dd if=$linuxisopath of=$devicel && sync
+            sudo dd if=$linuxisopath of=$devicel && sync
             clear
             echo 'Complete! Have a nice day!'
         elif [[ "$flashiso" == "3" ]]; then
@@ -58,7 +58,7 @@ do
             printf 'BSD .iso path: '
             read BSDisopath
             sudo umount $deviceb*
-            dd if=/home/nnonym/Загрузки/$deviceb of=deviceb bs=10240
+            sudo dd if=/home/nnonym/Загрузки/$deviceb of=deviceb bs=10240
             clear
             echo 'Complete! Have a nice day!'
         fi
@@ -70,7 +70,7 @@ do
         printf '.img path: '
         read imgpath
         sudo umount $devicei*
-        dd if=$imgpath of=$devicei && sync
+        sudo dd if=$imgpath of=$devicei && sync
         clear
         echo 'Complete! Have a nice day!'
     elif [[ "$flashall" == "3" ]]; then
@@ -83,7 +83,7 @@ do
         read deviced
         sudo umount $deviced*
         dmg2img $dmgpath.dmg $dmgpath.iso
-        dd if=$dmgpath.iso of=$deviced && sync
+        sudo dd if=$dmgpath.iso of=$deviced && sync
         clear
         echo 'Complete! Have a nice day!'
     elif [[ "$flashall" == "0" ]]; then
