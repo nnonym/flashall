@@ -12,7 +12,7 @@ do
     echo '--------------------'
     echo '1) ISO menu'
     echo '2) Flash .img file'
-    echo '3) Flash .dmg file'
+    echo '3) Flash .dmg file[NOT FOR HACKINTOSH]'
     echo '--------------------'
     echo '0) Exit'
     echo '--------------------'
